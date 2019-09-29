@@ -8,9 +8,10 @@
     "port": 27017,
     "url": "",
     "database": "btf",
-    "name": "member",
+    "name": "btf",
     "user": "",
     "useNewUrlParser": true,
-    "connector": "mongodb"
+    "connector": "mongodb",
+    "allowExtendedOperators": true
   }
 }
