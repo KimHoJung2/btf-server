@@ -4,7 +4,7 @@ module.exports = function(Member) {
 
 
     Member.signup = function(type, data, cb){
-        cb(null, data)
+        cb(null)
     } 
 
   Member.remoteMethod('signup',{
