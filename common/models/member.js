@@ -3,5 +3,9 @@
 module.exports = function(Member) {
 
 
-    console.log(Member);
+    Member.signup = function(){
+        console.log("asdfasdfsadf")
+    } 
+
+    Member.remoteMethod('signup');  
 };
