@@ -8,7 +8,7 @@ module.exports = function(Member) {
     } 
 
   Member.remoteMethod('signup',{
-    accepts : {arg:'erkjqlndf', type: 'string'},
+    accepts : {arg:'msg', type: 'string'},
     returns : {arg: 'greeting', type: 'strging'}
   });  
 };
