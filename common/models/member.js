@@ -26,5 +26,14 @@ module.exports = function(Member) {
                 cb(null);
             });
         });
-    };    
+    };
+    
+    
+    Member.remoteMethod('insertData', {
+        accepts: [
+            { arg: 'insertType', type: 'string', require: true },
+            { arg: 'data', type: 'object', require: true }
+        ],
+        returns : { arg: 'Contetn-Type', type: 'strgin', http: { target : 'header' }}
+    })
 };
