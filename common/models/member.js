@@ -31,8 +31,8 @@ module.exports = function(Member) {
     
     Member.remoteMethod('insertData', {
         accepts: [
-            { arg: 'insertType', type: 'string', require: true },
-            { arg: 'data', type: 'object', require: true }
+            { arg: 'memberName', type: 'string', require: true },
+            { arg: 'password', type: 'string', require: true }
         ],
         returns : { arg: 'Contetn-Type', type: 'strgin', http: { target : 'header' }}
     })
