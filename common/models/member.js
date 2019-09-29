@@ -3,8 +3,8 @@
 module.exports = function(Member) {
 
 
-    Member.signup = function(msg, cb){
-        cb(null)
+    Member.signup = function(data, cb){
+        cb(null, data)
     } 
 
   Member.remoteMethod('signup',{
