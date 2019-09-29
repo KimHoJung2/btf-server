@@ -8,11 +8,9 @@ module.exports = function(Member) {
     } 
 
   Member.remoteMethod('signup',{
-    accepts : [
+    accepts : 
         { arg: 'memberId', type: 'string' },
-        { arg: 'memberName', type: 'string' },
-        { arg: 'password', type:'string'}
-    ],
+      
     returns : { arg: 'data', type: 'object'}
   });  
 };
