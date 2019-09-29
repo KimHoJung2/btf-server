@@ -8,9 +8,8 @@
     "port": 27017,
     "url": "",
     "database": "btf",
-    "password": "likaid12",
     "name": "member",
-    "user": "ghwjd7376",
+    "user": "",
     "useNewUrlParser": true,
     "connector": "mongodb"
   }
