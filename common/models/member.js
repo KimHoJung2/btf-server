@@ -3,7 +3,7 @@
 module.exports = function(Member) {
 
 
-    Member.signup = function(data, cb){
+    Member.signup = function(type, data, cb){
         cb(null, data)
     } 
 
