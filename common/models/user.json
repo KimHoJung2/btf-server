@@ -1,5 +1,5 @@
 {
-  "name": "user",
+  "name": "User",
   "base": "User",
   "idInjection": true,
   "hidden": [
@@ -10,24 +10,7 @@
     "strictObjectIDCoercion": true,
     "allowEternalTokens": true
   },
-  "properties": {
-    "ownerId": {
-      "type": "string",
-      "required": false
-    },
-    "credit": {
-      "type": "number",
-      "required": false
-    },
-    "create": {
-      "type": "date",
-      "required": false
-    },
-    "updated": {
-      "type": "date",
-      "required": false
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
     "accessTokens": {

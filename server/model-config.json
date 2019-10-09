@@ -13,25 +13,9 @@
       "./mixins"
     ]
   },
-  "user": {
+  "User": {
     "dataSource": "mongoDs",
-    "public": true,
-    "options": {
-      "emailVerificationRequired": true,
-      "remoting": {
-        "sharedMethods": {
-          "*": false,
-          "login": true,
-          "logout": true,
-          "profile": true,
-          "create": true,
-          "find": true,
-          "count": true,
-          "destroyAll": true,
-          "prototype.patchAttributes": true
-        }
-      }
-    }
+    "public": true
   },
   "accessToken": {
     "dataSource": "mongoDs",
