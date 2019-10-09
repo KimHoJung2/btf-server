@@ -42,7 +42,7 @@
       "emailVerificationRequired": false,
       "remoting": {
         "sharedMethods": {
-          "*": false,
+          "*": true,
           "login": true,
           "logout": true,
           "profile": true,
