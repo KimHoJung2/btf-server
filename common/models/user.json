@@ -1,105 +1,103 @@
 {
-    "name": "user",
-    "base": "User",
-    "idInjection": true,
-    "hidden": [
-      "emailVerified"
-    ],
-    "options": {
-      "allowEternalTokens": true
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "hidden": [
+    "emailVerified"
+  ],
+  "options": {
+    "validateUpsert": true,
+    "strictObjectIDCoercion": true,
+    "allowEternalTokens": true
+  },
+  "properties": {
+    "ownerId": {
+      "type": "string",
+      "required": false
     },
-    "properties": {
-      "securityNumber": {
-        "type": "string",
-        "required": false
-      },
-      "ownerId": {
-        "type": "string",
-        "required": false
-      },
-      "credit": {
-        "type": "number",
-        "required": false
-      },
-      "create": {
-        "type": "date",
-        "required": false
-      },
-      "updated": {
-        "type": "date",
-        "required": false
-      }
+    "credit": {
+      "type": "number",
+      "required": false
     },
-    "validations": [],
-    "relations": {
-      "accessTokens": {
-        "type": "hasMany",
-        "model": "accessToken",
-        "foreignKey": "userId",
-        "options": {
-          "disableInclude": true
-        }
-      }
+    "create": {
+      "type": "date",
+      "required": false
     },
-    "acls": [
-      {
-        "accessType": "READ",
-        "principalType": "ROLE",
-        "principalId": "$authenticated",
-        "permission": "ALLOW",
-        "property": "profile"
-      },
-      {
-        "property": "find",
-        "principalType": "ROLE",
-        "principalId": "$authenticated",
-        "permission": "ALLOW"
-      },
-      {
-        "property": "create",
-        "principalType": "ROLE",
-        "principalId": "$authenticated",
-        "permission": "ALLOW"
-      },
-      {
-        "property": "count",
-        "principalType": "ROLE",
-        "principalId": "$authenticated",
-        "permission": "ALLOW"
-      },
-      {
-        "property": "destroyAll",
-        "principalType": "ROLE",
-        "principalId": "$authenticated",
-        "permission": "ALLOW"
-      },
-      {
-        "property": "prototype.patchAttributes",
-        "principalType": "ROLE",
-        "principalId": "$authenticated",
-        "permission": "ALLOW"
+    "updated": {
+      "type": "date",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "accessToken",
+      "foreignKey": "userId",
+      "options": {
+        "disableInclude": true
       }
-    ],
-    "methods": {
-      "profile": {
-        "accepts": [
-          {
-            "arg": "req",
-            "type": "object",
-            "http": {
-              "source": "req"
-            }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "profile"
+    },
+    {
+      "property": "find",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "create",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "count",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "destroyAll",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "property": "prototype.patchAttributes",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {
+    "profile": {
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "http": {
+            "source": "req"
           }
-        ],
-        "returns": [
-          {
-            "arg": "result",
-            "type": "object"
-          }
-        ],
-        "http": {
-          "verb": "get"
         }
+      ],
+      "returns": [
+        {
+          "arg": "result",
+          "type": "object"
+        }
+      ],
+      "http": {
+        "verb": "get"
       }
     }
   }
+}
