@@ -43,7 +43,9 @@
       "remoting": {
         "sharedMethods": {
           "*":true,
-          "profile":true
+          "profile":true,
+          "login": true,
+          "prototype.patchAttributes": true
         }
      }
     }
