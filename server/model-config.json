@@ -39,6 +39,7 @@
     "dataSource": "mongoDs",
     "public": true,
     "options": {
+      "emailVerificationRequired": true,
       "remoting": {
         "sharedMethods": {
           "*": false,
@@ -58,9 +59,9 @@
     "dataSource": "mongoDs",
     "public": false,
     "relations": {
-      "User": {
+      "user": {
         "type": "belongsTo",
-        "model": "User",
+        "model": "user",
         "foreignKey": "userId"
       }
     }
