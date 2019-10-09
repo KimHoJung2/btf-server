@@ -2,15 +2,20 @@
     "name": "user",
     "base": "User",
     "idInjection": true,
-    "hidden": [
-      "emailVerified"
-    ],
     "options": {
       "validateUpsert": true,
       "strictObjectIDCoercion": true,
       "allowEternalTokens": true
     },
     "properties": {
+      "securityNumber": {
+        "type": "string",
+        "required": false
+      },
+      "joinDate": {
+        "type": "string",
+        "required": false
+      },
       "ownerId": {
         "type": "string",
         "required": false
