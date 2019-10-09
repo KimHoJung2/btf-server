@@ -1,5 +1,5 @@
 {
-    "name": "user",
+    "name": "User",
     "base": "User",
     "idInjection": true,
     "options": {
