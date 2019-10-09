@@ -3,14 +3,12 @@
 module.exports = function(Member) {
 
 
-    Member.signup = function(data, cb){
-        cb(null, data)
-    } 
-
-  Member.remoteMethod('signup',{
-    accepts : 
-        { arg: 'memberId', type: 'string' },
-      
-    returns : { arg: 'data', type: 'object'}
-  });  
+    Member.findOne({where: {userName:'김호정'}}, (err, user) => {
+      if(err || !user){
+        console.log('false');
+      }else{
+        console.log(true);
+        console.log(user);
+      }
+    })
 };
