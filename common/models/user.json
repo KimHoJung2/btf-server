@@ -2,10 +2,10 @@
     "name": "user",
     "base": "User",
     "idInjection": true,
-    "hidden":["emailVerified"],
+    "hidden": [
+      "emailVerified"
+    ],
     "options": {
-      "validateUpsert": true,
-      "strictObjectIDCoercion": true,
       "allowEternalTokens": true
     },
     "properties": {
