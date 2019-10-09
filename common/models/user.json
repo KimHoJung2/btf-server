@@ -2,9 +2,6 @@
     "name": "user",
     "base": "User",
     "idInjection": true,
-    "hidden": [
-      "emailVerified"
-    ],
     "options": {
       "validateUpsert": true,
       "strictObjectIDCoercion": true,
