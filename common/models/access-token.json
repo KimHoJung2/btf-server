@@ -9,7 +9,7 @@
     "relations": {
       "Users": {
         "type": "belongsTo",
-        "model": "Users",
+        "model": "user",
         "foreignKey": "userId"
       }
     },
