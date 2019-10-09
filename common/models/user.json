@@ -1,15 +1,30 @@
 {
     "name": "user",
-    "base": "user",
+    "base": "User",
     "idInjection": true,
+    "hidden": [
+      "emailVerified"
+    ],
     "options": {
       "validateUpsert": true,
       "strictObjectIDCoercion": true,
       "allowEternalTokens": true
     },
     "properties": {
-      "securityNumber": {
+      "ownerId": {
         "type": "string",
+        "required": false
+      },
+      "credit": {
+        "type": "number",
+        "required": false
+      },
+      "create": {
+        "type": "date",
+        "required": false
+      },
+      "updated": {
+        "type": "date",
         "required": false
       }
     },

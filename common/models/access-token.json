@@ -7,7 +7,7 @@
     "properties": {},
     "validations": [],
     "relations": {
-      "Users": {
+      "user": {
         "type": "belongsTo",
         "model": "user",
         "foreignKey": "userId"
