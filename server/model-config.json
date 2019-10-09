@@ -13,9 +13,6 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db"
-  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
@@ -38,7 +35,7 @@
   "Message": {
     "dataSource": null
   },  
-  "Users": {
+  "User": {
     "dataSource": "mongoDs",
     "public": true,
     "options": {
