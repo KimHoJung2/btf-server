@@ -10,7 +10,24 @@
     "strictObjectIDCoercion": true,
     "allowEternalTokens": true
   },
-  "properties": {},
+  "properties": {
+    "ownerId": {
+      "type": "string",
+      "required": false
+    },
+    "credit": {
+      "type": "number",
+      "required": false
+    },
+    "create": {
+      "type": "date",
+      "required": false
+    },
+    "updated": {
+      "type": "date",
+      "required": false
+    }
+  },
   "validations": [],
   "relations": {
     "accessTokens": {
