@@ -39,20 +39,7 @@
     "dataSource": "mongoDs",
     "public": true,
     "options": {
-      "emailVerificationRequired": false,
-      "remoting": {
-        "sharedMethods": {
-          "*": true,
-          "login": true,
-          "logout": true,
-          "profile": true,
-          "create": true,
-          "find": true,
-          "count": true,
-          "destroyAll": true,
-          "prototype.patchAttributes": true
-        }
-      }
+      "emailVerificationRequired": false
     }
   },
   "accessToken": {
