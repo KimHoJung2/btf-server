@@ -31,9 +31,7 @@
     }
   },
   "session": {},
-  "auth": {
-    "loopback#token":{}
-  },
+  "auth": {},
   "parse": {},
   "routes": {
     "loopback#rest": {
