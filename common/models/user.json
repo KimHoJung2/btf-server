@@ -1,8 +1,8 @@
 {
     "name": "user",
     "base": "User",
-    "excludeBaseProperties": ["email"],
     "idInjection": true,
+    "hidden":["email","emailVerified"],
     "options": {
       "allowEternalTokens": true
     },
