@@ -15,13 +15,28 @@
   },
   "User": {
     "dataSource": "mongoDs",
-    "public": true
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "login": true,
+          "logout": true,
+          "profile": true,
+          "create": true,
+          "find": true,
+          "count": true,
+          "destroyAll": true,
+          "prototype.patchAttributes": true
+        }
+      }
+    }
   },
   "accessToken": {
     "dataSource": "mongoDs",
     "public": false,
     "relations": {
-      "User": {
+      "user": {
         "type": "belongsTo",
         "model": "User",
         "foreignKey": "userId"
