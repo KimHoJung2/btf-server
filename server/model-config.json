@@ -45,6 +45,7 @@
           "*":true,
           "profile":true
         }
+     }
     }
   },
   "accessToken": {
