@@ -8,20 +8,8 @@
       "allowEternalTokens": true
     },
     "properties": {
-      "ownerId": {
+      "securityNumber": {
         "type": "string",
-        "required": false
-      },
-      "credit": {
-        "type": "number",
-        "required": false
-      },
-      "create": {
-        "type": "date",
-        "required": false
-      },
-      "updated": {
-        "type": "date",
         "required": false
       }
     },

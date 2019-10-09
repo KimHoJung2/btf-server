@@ -20,7 +20,7 @@
     "database": "btf",
     "password": "likaid12",
     "url": false,
-    "name": "member",
+    "name": "mongoDs",
     "user": "ghwjd7376",
     "connector": "mongodb",
     "useNewUrlParser":true
