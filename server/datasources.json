@@ -13,5 +13,16 @@
     "user": "ghwjd7376",
     "useNewUrlParser": true,
     "connector": "mongodb"
+  },
+  "mongoDs": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "btf",
+    "password": "likaid12",
+    "url": false,
+    "name": "member",
+    "user": "ghwjd7376",
+    "connector": "mongodb",
+    "useNewUrlParser":true
   }
 }
