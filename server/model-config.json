@@ -38,7 +38,7 @@
   "Message": {
     "dataSource": null
   },  
-  "user": {
+  "Users": {
     "dataSource": "mongoDs",
     "public": true,
     "options": {

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (User) => {
-  User.observe('before save', function (context, next) {
+  /*User.observe('before save', function (context, next) {
     const updatedDate = new Date();
 
     if (context.instance) {
@@ -85,5 +85,5 @@ module.exports = (User) => {
     }
 
     return next();
-  });
+  });*/
 };
