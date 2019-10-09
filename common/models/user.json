@@ -1,6 +1,7 @@
 {
     "name": "user",
     "base": "PersistedModel",
+    "excludeBaseProperties": ["email"],
     "idInjection": true,
     "options": {
       "allowEternalTokens": true
