@@ -1,6 +1,6 @@
 {
     "name": "user",
-    "base": "User",
+    "base": "PersistedModel",
     "idInjection": true,
     "options": {
       "allowEternalTokens": true
