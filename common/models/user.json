@@ -18,7 +18,7 @@
     "username":{
       "type":"string",
       "required":true,
-      "index": {"unique":true}
+      "index": {"unique":false}
     },
     "ownerId": {
       "type": "string",
