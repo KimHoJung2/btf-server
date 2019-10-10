@@ -1,6 +1,8 @@
 'use strict';
 
 module.exports = (User) => {
+
+  delete User.validations.username;
  /* User.observe('before save', function (context, next) {
     const updatedDate = new Date();
 
