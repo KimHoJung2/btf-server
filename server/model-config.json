@@ -17,7 +17,6 @@
     "dataSource": "mongoDs",
     "public": true,
     "options": {
-      "emailVerificationRequired": true,
       "remoting": {
         "sharedMethods": {
           "*": true,
