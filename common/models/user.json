@@ -11,6 +11,15 @@
     "allowEternalTokens": true
   },
   "properties": {
+    "email":{
+      "type":"string",
+      "required":false
+    },
+    "username":{
+      "type":"string",
+      "required":true,
+      "index": {"unique":true}
+    },
     "ownerId": {
       "type": "string",
       "required": false
