@@ -60,9 +60,13 @@
   },
   "Message": {
     "dataSource": null
-  },  
+  },
   "member": {
     "dataSource": "member",
+    "public": true
+  },
+  "calendarData": {
+    "dataSource": "mongoDs",
     "public": true
   }
 }

@@ -2,14 +2,14 @@
   "name": "user",
   "base": "User",
   "idInjection": true,
-  "hidden": [
-    "emailVerified"
-  ],
   "options": {
     "validateUpsert": true,
     "strictObjectIDCoercion": true,
     "allowEternalTokens": true
   },
+  "hidden": [
+    "emailVerified"
+  ],
   "properties": {
     "ownerId": {
       "type": "string",
@@ -48,34 +48,34 @@
       "property": "profile"
     },
     {
-      "property": "find",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "find"
     },
     {
-      "property": "create",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "create"
     },
     {
-      "property": "count",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "count"
     },
     {
-      "property": "destroyAll",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "destroyAll"
     },
     {
-      "property": "prototype.patchAttributes",
       "principalType": "ROLE",
       "principalId": "$authenticated",
-      "permission": "ALLOW"
+      "permission": "ALLOW",
+      "property": "prototype.patchAttributes"
     }
   ],
   "methods": {

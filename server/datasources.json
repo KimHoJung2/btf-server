@@ -17,12 +17,12 @@
   "mongoDs": {
     "host": "localhost",
     "port": 27017,
+    "url": false,
     "database": "btf",
     "password": "likaid12",
-    "url": false,
     "name": "mongoDs",
     "user": "ghwjd7376",
     "connector": "mongodb",
-    "useNewUrlParser":true
+    "useNewUrlParser": true
   }
 }
