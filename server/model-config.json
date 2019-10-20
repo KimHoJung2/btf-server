@@ -68,5 +68,9 @@
   "calendarData": {
     "dataSource": "mongoDs",
     "public": true
+  },
+  "mainscoreBoardData": {
+    "dataSource": "mongoDs",
+    "public": true
   }
 }
