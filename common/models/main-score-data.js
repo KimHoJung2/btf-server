@@ -11,7 +11,7 @@ module.exports = function(Mainscoredata) {
         });
     };
 
-    Mainscoredatab.remoteMethod('getMyScore',{
+    Mainscoredata.remoteMethod('getMyScore',{
         accepts : [
             { arg: 'getName', type: 'string', require: true },
             { arg: 'getDate', type: 'string', require: true }
