@@ -72,5 +72,9 @@
   "mainscoreBoardData": {
     "dataSource": "mongoDs",
     "public": true
+  },
+  "mainScoreData": {
+    "dataSource": "mongoDs",
+    "public": true
   }
 }
