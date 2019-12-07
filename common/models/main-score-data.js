@@ -11,7 +11,7 @@ module.exports = function(Mainscoredata) {
         });
     };
 
-    Mainscoredata.getScoreAll = function(name, date, cb){
+    Mainscoredata.getScoreAll = function(date, cb){
         Mainscoredata.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('mainScoreData');
             collection.find({'date': date}).toArray(function(err,res){
