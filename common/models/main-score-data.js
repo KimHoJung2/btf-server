@@ -11,10 +11,10 @@ module.exports = function(Mainscoredata) {
         });
     };
 
-    Mainscoredata.getScoreAll = function(date, cb){
+    Mainscoredata.getScoreAll = function(id, cb){
         Mainscoredata.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('mainScoreData');
-            collection.find({'date': date}).toArray(function(err,res){
+            collection.find({'boardId': id}).toArray(function(err,res){
                 cb(null,res);
             });
         });
@@ -31,7 +31,7 @@ module.exports = function(Mainscoredata) {
 
     Mainscoredata.remoteMethod('getScoreAll',{
         accepts : [
-            { arg: 'getDate', type: 'string', require: true }
+            { arg: 'getId', type: 'string', require: true }
         ],
         returns : { arg: 'result', type: 'object'},
         http : { path : '/getScoreAll',verb: 'get'}
