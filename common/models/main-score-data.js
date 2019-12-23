@@ -25,7 +25,7 @@ module.exports = function(Mainscoredata) {
     Mainscoredata.remoteMethod('getMyScore',{
         accepts : [
             { arg: 'getName', type: 'string', require: true },
-            { arg: 'getDate', type: 'string', require: true }
+            { arg: 'getId', type: 'string', require: true }
         ],
         returns : { arg: 'result', type: 'object'},
         http : { path : '/getMyScore',verb: 'get'}
