@@ -4,10 +4,10 @@ module.exports = function(Mainscoredata) {
 
     var ObjectId = require('mongodb').ObjectId;
 
-    Mainscoredata.getMyScore = function(name, date, cb){
+    Mainscoredata.getMyScore = function(name, id, cb){
         Mainscoredata.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('mainScoreData');
-            collection.find({'username':name, 'date': date}).toArray(function(err,res){
+            collection.find({'username':name, 'boardId': ObjectId(id)}).toArray(function(err,res){
                 cb(null,res);
             });
         });
