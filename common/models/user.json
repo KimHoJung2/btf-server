@@ -82,7 +82,9 @@
     "profile": {
       "accepts": [
         {
-          "arg": "getId"
+          "arg": "getId",
+          "type" : "string", 
+          "require": true 
         }
       ],
       "returns": [
