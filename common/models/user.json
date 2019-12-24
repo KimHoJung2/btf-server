@@ -41,6 +41,7 @@
   },
   "acls": [
     {
+      "accessType": "READ",
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW",
@@ -81,11 +82,7 @@
     "profile": {
       "accepts": [
         {
-          "arg": "req",
-          "type": "object",
-          "http": {
-            "source": "req"
-          }
+          "id":"string"
         }
       ],
       "returns": [
