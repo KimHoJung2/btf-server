@@ -34,7 +34,7 @@
   },
   "accessToken": {
     "dataSource": "mongoDs",
-    "public": false,
+    "public": true,
     "relations": {
       "user": {
         "type": "belongsTo",
