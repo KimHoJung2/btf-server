@@ -76,6 +76,12 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "prototype.patchAttributes"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "get"
     }
   ]
 }
