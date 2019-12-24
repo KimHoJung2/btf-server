@@ -11,7 +11,7 @@ module.exports = (AccessToken) => {
         });
     };
 
-    Mainscoredata.remoteMethod('getUser',{
+    AccessToken.remoteMethod('getUser',{
         accepts : [
             { arg: 'getUser', type: 'string', require: true }
         ],
