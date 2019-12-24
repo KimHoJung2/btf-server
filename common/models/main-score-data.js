@@ -25,7 +25,7 @@ module.exports = function(Mainscoredata) {
     Mainscoredata.removeAll = function(id, cb){
         Mainscoredata.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('mainScoreData');
-            var query = {_id : ObjectId(id)};
+            var query = {boardId : ObjectId(id)};
             collection.deleteOne(query).then(function(res){
                 return res;
             });
