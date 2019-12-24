@@ -77,25 +77,5 @@
       "permission": "ALLOW",
       "property": "prototype.patchAttributes"
     }
-  ],
-  "methods": {
-    "profile": {
-      "accepts": [
-        {
-          "arg": "getId",
-          "type" : "string", 
-          "require": true 
-        }
-      ],
-      "returns": [
-        {
-          "arg": "result",
-          "type": "object"
-        }
-      ],
-      "http": {
-        "verb": "get"
-      }
-    }
-  }
+  ]
 }
