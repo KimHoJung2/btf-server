@@ -81,7 +81,7 @@
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW",
-      "property": "get"
+      "property": "{id}"
     }
   ]
 }
