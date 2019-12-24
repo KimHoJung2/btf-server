@@ -4,7 +4,7 @@ module.exports = (AccessToken) => {
 
     AccessToken.getUser = function(id, cb){
         AccessToken.getDataSource().connector.connect(function(err,db){
-            var collection = db.collection('mainScoreData');
+            var collection = db.collection('accessToken');
             collection.find({'_id':id}).toArray(function(err,res){
                 cb(null,res);
             });
