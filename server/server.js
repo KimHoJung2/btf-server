@@ -26,6 +26,10 @@ app.start = function() {
 
 app.use(loopback.static(path.resolve(__dirname, '../client')));
 
+app.get('/*', (req, res) => {
+  res.sendfile(path.join(__dirname, '../client/index.html'));
+})
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
