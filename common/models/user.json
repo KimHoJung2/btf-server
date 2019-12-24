@@ -82,7 +82,11 @@
     "profile": {
       "accepts": [
         {
-          "id":"string"
+          "arg": "req",
+          "type": "object",
+          "http": {
+            "source": "req"
+          }
         }
       ],
       "returns": [
