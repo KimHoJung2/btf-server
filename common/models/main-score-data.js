@@ -20,6 +20,16 @@ module.exports = function(Mainscoredata) {
                 cb(null,res);
             });
         });
+    }
+    ;
+    Mainscoredata.removeAll = function(id, cb){
+        Mainscoredata.getDataSource().connector.connect(function(err,db){
+            var collection = db.collection(type);
+            var query = {_id : ObjectId(id)};
+            collection.deleteOne(query).then(function(res){
+                return res;
+            });
+        });
     };
 
     Mainscoredata.remoteMethod('getMyScore',{
@@ -29,6 +39,13 @@ module.exports = function(Mainscoredata) {
         ],
         returns : { arg: 'result', type: 'object'},
         http : { path : '/getMyScore',verb: 'get'}
+    });
+    Mainscoredata.remoteMethod('removeAll',{
+        accepts : [
+            { arg: 'removeId', type: 'string', require: true },
+        ],
+        returns : { arg: 'result', type: 'object'},
+        http : { path : '/removeAll',verb: 'get'}
     });
 
     Mainscoredata.remoteMethod('getScoreAll',{
