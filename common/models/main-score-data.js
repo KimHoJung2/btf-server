@@ -44,8 +44,7 @@ module.exports = function(Mainscoredata) {
         accepts : [
             { arg: 'removeId', type: 'string', require: true },
         ],
-        returns : { arg: 'result', type: 'object'},
-        http : { path : '/removeAll',verb: 'get'}
+        returns: { arg: 'Content-Type', type: 'string', http: { target: 'header' }}
     });
 
     Mainscoredata.remoteMethod('getScoreAll',{
