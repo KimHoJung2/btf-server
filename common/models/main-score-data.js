@@ -20,8 +20,17 @@ module.exports = function(Mainscoredata) {
                 cb(null,res);
             });
         });
-    }
-    ;
+    };
+
+    Mainscoredata.getAllAvg = function(name, id, cb){
+        Mainscoredata.getDataSource().connector.connect(function(err,db){
+            var collection = db.collection('mainScoreData');
+            collection.find({'username':name},{'userId': ObjectId(id)}).toArray(function(err,res){
+                cb(null,res);
+            });
+        });
+    };
+
     Mainscoredata.removeAll = function(id, cb){
         Mainscoredata.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('mainScoreData');
@@ -32,6 +41,15 @@ module.exports = function(Mainscoredata) {
         });
     };
 
+    Mainscoredata.remoteMethod('getAllAvg',{
+        accepts : [
+            { arg: 'getName', type: 'string', require: true },
+            { arg: 'getId', type: 'string', require: true }
+        ],
+        returns : { arg: 'result', type: 'object'},
+        http : { path : '/getAllAvg',verb: 'get'}
+    });
+
     Mainscoredata.remoteMethod('getMyScore',{
         accepts : [
             { arg: 'getName', type: 'string', require: true },
@@ -40,6 +58,8 @@ module.exports = function(Mainscoredata) {
         returns : { arg: 'result', type: 'object'},
         http : { path : '/getMyScore',verb: 'get'}
     });
+    
+
     Mainscoredata.remoteMethod('removeAll',{
         accepts : [
             { arg: 'removeId', type: 'string', require: true },
