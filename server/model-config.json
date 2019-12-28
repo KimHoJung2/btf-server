@@ -80,5 +80,9 @@
   "mainAttendBoardData": {
     "dataSource": "mongoDs",
     "public": true
+  },
+  "attendUser": {
+    "dataSource": "mongoDs",
+    "public": true
   }
 }
