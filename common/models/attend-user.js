@@ -33,15 +33,6 @@ module.exports = function(Attenduser) {
 
     Attenduser.remoteMethod('deleteUser',{
         accepts : [
-            { arg: 'getName', type: 'string', require: true },
-            { arg: 'getBoardId', type: 'string', require: true }
-        ],
-        returns : { arg: 'result', type: 'object'},
-        http : { path : '/getUser',verb: 'get'}
-    });
-    
-    Attenduser.remoteMethod('deleteUser',{
-        accepts : [
             { arg: 'deleteName', type: 'string', require: true },
             { arg: 'deleteBoardId', type: 'string', require: true },
         ],
