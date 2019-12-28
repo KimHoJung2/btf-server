@@ -83,5 +83,6 @@
       "permission": "ALLOW",
       "property": "{id}"
     }
-  ]
+  ],
+  "methods": {}
 }
