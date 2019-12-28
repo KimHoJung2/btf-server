@@ -13,6 +13,7 @@
     "user": "ghwjd7376",
     "useNewUrlParser": true,
     "connector": "mongodb"
+    
   },
   "mongoDs": {
     "host": "localhost",
@@ -23,6 +24,7 @@
     "name": "mongoDs",
     "user": "ghwjd7376",
     "connector": "mongodb",
-    "useNewUrlParser": true
+    "useNewUrlParser": true,
+    "useUnifiedTopology": true 
   }
 }
