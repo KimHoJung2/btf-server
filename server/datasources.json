@@ -24,7 +24,6 @@
     "name": "mongoDs",
     "user": "ghwjd7376",
     "connector": "mongodb",
-    "useNewUrlParser": true,
-    "useUnifiedTopology": true 
+    "useNewUrlParser": true
   }
 }

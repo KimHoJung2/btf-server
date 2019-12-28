@@ -2,7 +2,8 @@
 
 module.exports = function(Attenduser) {
 
-
+    var ObjectId = require('mongodb').ObjectId;
+    
     Attenduser.getUser = function(name, id, cb){
         Attenduser.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('attendUser');
