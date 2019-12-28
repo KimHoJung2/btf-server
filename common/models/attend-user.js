@@ -12,6 +12,15 @@ module.exports = function(Attenduser) {
             });
         });
     };
+
+    Attenduser.getList = function(id, cb){
+        Attenduser.getDataSource().connector.connect(function(err,db){
+            var collection = db.collection('attendUser');
+            collection.find({'boardId': ObjectId(id)}).toArray(function(err,res){
+                cb(null,res);
+            });
+        });
+    };
     
     Attenduser.deleteUser = function(name, id, cb){
         Attenduser.getDataSource().connector.connect(function(err,db){
@@ -29,6 +38,14 @@ module.exports = function(Attenduser) {
         ],
         returns : { arg: 'result', type: 'object'},
         http : { path : '/getUser',verb: 'get'}
+    });
+
+    Attenduser.remoteMethod('getList',{
+        accepts : [
+            { arg: 'getBoardId', type: 'string', require: true }
+        ],
+        returns : { arg: 'result', type: 'object'},
+        http : { path : '/getList',verb: 'get'}
     });
 
     Attenduser.remoteMethod('deleteUser',{
