@@ -29,6 +29,7 @@ module.exports = function(Attenduser) {
                 return res
             });
         });
+        cb(null)
     };
 
     Attenduser.remoteMethod('getUser',{
