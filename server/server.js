@@ -32,6 +32,9 @@ app.get('/mainscore', (req, res) => {
 app.get('/userInfo', (req, res) => {
   res.sendfile(path.join(__dirname, '../client/index.html'));
 })
+app.get('/mainAttend', (req, res) => {
+  res.sendfile(path.join(__dirname, '../client/index.html'));
+})
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
