@@ -7,7 +7,7 @@ module.exports = function(Attenduser) {
     Attenduser.getUser = function(name, id, cb){
         Attenduser.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('attendUser');
-            collection.find({'username':name},{'boardId': ObjectId(id)}).toArray(function(err,res){
+            collection.find({$and : [{'username':name},{'boardId': ObjectId(id)}]}).toArray(function(err,res){
                 cb(null,res);
             });
         });
