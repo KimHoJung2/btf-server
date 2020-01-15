@@ -90,5 +90,20 @@
       "property": "{id}"
     }
   ],
-  "methods": {}
+  "methods": {
+    "updateUserPassword": {
+      "accepts": [{
+        "arg": "params",
+        "type": "object"
+      }],
+      "returns": [{
+        "type": "object",
+        "root": true
+      }],
+      "http": {
+        "path": "/password",
+        "verb": "put"
+      }
+    }
+  }
 }
