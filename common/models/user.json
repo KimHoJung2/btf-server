@@ -66,6 +66,12 @@
       "property": "count"
     },
     {
+      "property": "updateUserPassword",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW",
