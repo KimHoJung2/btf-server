@@ -27,6 +27,7 @@
           "find": true,
           "count": true,
           "destroyAll": true,
+          "updateUserPassword": true,
           "prototype.patchAttributes": true
         }
       }
