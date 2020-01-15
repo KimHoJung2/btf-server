@@ -18,6 +18,7 @@
     "public": true,
     "options": {
       "remoting": {
+        "emailVerificationRequired": true,
         "sharedMethods": {
           "*": true,
           "login": true,

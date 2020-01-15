@@ -8,7 +8,8 @@
     "allowEternalTokens": true
   },
   "hidden": [
-    "emailVerified"
+    "bizRegFile",
+    "storeImage"
   ],
   "properties": {
     "ownerId": {
@@ -68,7 +69,7 @@
     {
       "property": "updateUserPassword",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     },
     {
