@@ -24,7 +24,7 @@ app.start = function() {
   });
 };
 
-app.use(loopback.static(path.resolve(__dirname, '../client/index.html')));
+app.use(loopback.static(path.resolve(__dirname, '../client')));
 
 app.get('/mainscore', (req, res) => {
   res.sendfile(path.join(__dirname, '../client/index.html'));
