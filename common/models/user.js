@@ -11,28 +11,6 @@ module.exports = (User) => {
             });
         });
     };
-    User.updateUserPassword = (params, cb) => {
-        User.findOne({
-          where: {
-            email: params.email
-          }
-        }).then(result => {
-          if (result) {
-            result.updateAttribute('password', params.password, function(err, user) {
-              if (user) {
-                return cb(null, utils.s('AC0000', 'SUCCESS'));
-              } else {
-                return cb(utils.e(500, ''));
-              }
-            });
-          } else {
-            return cb(utils.e(400, 'WRONG PARAMETER'));
-          }
-        }).catch(error => {
-          return cb(error);
-        });
-      };
-      
     User.remoteMethod('getUser',{
         accepts : [
             { arg: 'getUser', type: 'string', require: true }

@@ -8,8 +8,7 @@
     "allowEternalTokens": true
   },
   "hidden": [
-    "bizRegFile",
-    "storeImage"
+    "emailVerified"
   ],
   "properties": {
     "ownerId": {
