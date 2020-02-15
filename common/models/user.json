@@ -94,6 +94,12 @@
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "getUser"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "*"
     }
   ],
   "methods": {
