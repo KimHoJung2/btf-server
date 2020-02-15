@@ -13,6 +13,13 @@ module.exports = function(Mainscoreboarddata) {
         });
     };
 
+   Mainscoreboarddata.getSuccess = function(id, cb){
+       Mainscoreboarddata.getDataSource.connector.connect(function(err, db){
+           var collection = db.collection('mainscoreBoardData');
+           collection.update({id:id}, {$set:{close:'true'}})
+       })
+   } 
+
     Mainscoreboarddata.remoteMethod('getBoard',{
         accepts : [
             { arg: 'getId', type: 'string', require: true }
@@ -21,4 +28,11 @@ module.exports = function(Mainscoreboarddata) {
         http : { path : '/getBoard',verb: 'get'}
     });
 
+    Mainscoreboarddata.remoteMethod('getSuccess',{
+        accepts : [
+            { arg: 'getId', type: 'string', require: true }
+        ],
+        returns : { arg: 'result', type: 'object'},
+        http : { path : '/getSuccess',verb: 'get'}
+    });
 };
