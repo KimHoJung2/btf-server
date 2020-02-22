@@ -6,6 +6,7 @@ module.exports = (User) => {
     User.getUser = function(id, name, cb){
         User.getDataSource().connector.connect(function(err,db){
             var collection = db.collection('user');
+            console.log(name);
             if(name === undefined){
                 collection.find({'_id':ObjectId(id)}).toArray(function(err,res){
                     cb(null,res);
